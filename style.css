@@ -1,0 +1,86 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+}
+
+* {
+    user-select: inherit;
+    font-family: inherit;
+}
+
+#mapContainer .land {
+    fill: #86aae0;
+    stroke: white;
+    stroke-width: 0.6;
+}
+
+#mapContainer:not([data-started=true]) .land {
+    fill: #7e7e7e;
+}
+
+#mapContainer[data-started=true] .land:hover {
+    fill: #a8c6f1;
+}
+
+#mapContainer[data-started=true] .land.found {
+    fill: #949494;
+}
+
+#mapContainer[data-started=true] .land.missed {
+    fill: #eb5454;
+}
+
+#mainContainer {
+    flex-direction: column;
+    height: 75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+}
+
+#regionLabel {
+    min-height: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    flex: 0 1;
+}
+
+#mapContainer {
+    flex: 1 1;
+    display: inline-block;
+    min-height: 20px;
+    padding: 10px;
+}
+
+#map {
+    height: 100%;
+}
+
+#startGame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    font-size: 3em;
+    height: 3em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#score {
+    font-size: 3em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
